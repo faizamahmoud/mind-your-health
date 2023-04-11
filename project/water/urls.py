@@ -1,7 +1,8 @@
 # path/, name of view, string name of route
 from django.urls import path
-from . import views
+from .views import WaterIntakeView
+
 
 urlpatterns = [
-    path('', views.Home.as_view(), name="home"),
+    path('water/', WaterIntakeView.as_view(), name='water-intake'),
 ]
