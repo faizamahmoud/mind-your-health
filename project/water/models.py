@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 class WaterIntake(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    intake = models.FloatField(default=0, decimal_places=2) #in oz
+    intake = models.DecimalField(default=0, max_digits=5,  decimal_places=2) #in oz
     date = models.DateField(auto_now_add=True)
     
     def __str__(self):
